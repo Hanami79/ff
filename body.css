@@ -1,0 +1,129 @@
+ body {
+        background: linear-gradient(135deg, #ffd4f5, #ff9cd9, #ffcdf2);
+        background-size: 400% 400%;
+        animation: gradientMove 10s ease infinite;
+        font-family: 'Comic Sans MS', Arial, sans-serif;
+        color: #ff2e93;
+        margin: 0;
+        padding: 0;
+    }
+
+    @keyframes gradientMove {
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
+    }
+
+    /* Меню */
+    .menu {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(8px);
+    }
+
+    .menu a {
+        padding: 10px 20px;
+        background: #ff7ccf;
+        border-radius: 15px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        text-shadow: 0 0 4px #ff1493;
+        box-shadow: 0 0 10px #ff5ac8;
+        transition: 0.3s;
+    }
+
+    .menu a:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px #ff1493;
+    }
+
+    /* Контейнер */
+    .container {
+        width: 90%;
+        max-width: 850px;
+        margin: auto;
+        background: rgba(255, 240, 250, 0.8);
+        padding: 25px;
+        border-radius: 25px;
+        box-shadow: 0 0 25px rgba(255, 0, 140, 0.3);
+        margin-top: 20px;
+        backdrop-filter: blur(6px);
+        animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(30px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    h1, h2 {
+        text-align: center;
+        color: #ff0fa8;
+        text-shadow: 0 0 10px #ff6bd7;
+    }
+
+    /* Фото */
+    .center-img {
+        display: flex;
+        justify-content: center;
+        margin: 25px 0;
+    }
+
+    .glow-img {
+        width: 260px;
+        border-radius: 25px;
+        box-shadow: 0 0 20px #ff69c9, 0 0 40px #ff91e8, 0 0 70px #ff30c7;
+        animation: pulseGlow 3s infinite;
+        border: 4px solid #ffb4e6;
+    }
+
+    @keyframes pulseGlow {
+        0% { box-shadow: 0 0 20px #ff69c9; }
+        50% { box-shadow: 0 0 40px #ff30c7; }
+        100% { box-shadow: 0 0 20px #ff69c9; }
+    }
+
+    .section {
+        background: #ffe1f3;
+        padding: 18px;
+        border-radius: 15px;
+        margin-top: 20px;
+        box-shadow: 0 0 10px rgba(255, 0, 150, 0.2);
+    }
+
+    /* Переписки */
+    .chat {
+        background: #fff5fb;
+        border-radius: 15px;
+        padding: 15px;
+        margin: 10px 0;
+        box-shadow: 0 0 10px rgba(255, 0, 200, 0.2);
+    }
+
+    .aiz {
+        color: #ff3aa3;
+        font-weight: bold;
+    }
+    .adai {
+        color: #8b2bff;
+        font-weight: bold;
+    }
+
+    /* Летающие сердечки */
+    .heart {
+        position: fixed;
+        color: #ff4da6;
+        font-size: 20px;
+        animation: floatHearts 6s linear infinite;
+        opacity: 0.7;
+        z-index: 999;
+    }
+
+    @keyframes floatHearts {
+        from { transform: translateY(100vh) translateX(0); opacity: 1; }
+        to { transform: translateY(-10vh) translateX(40px); opacity: 0; }
+    }
